@@ -1,4 +1,4 @@
 package lesson01_Array;
 
-public class ForEach {
+public class ForEachLoop {
 }
