@@ -1,0 +1,98 @@
+# JAVA-Collections
+
+- What is Collection Framework?
+    - interfaces and classes —→ organize our data
+    - JAVA collections framework is a set of pre-written classes and interfaces that helps us to organize and manipulate groups of data
+- Why we need collections?
+
+    Data → store (group of data)
+
+    Arrays (limited: fixed size, homogenious)
+
+    Collections → more flexible and provide useful methods
+
+    Benefits of collections: growable, different types of Data, supports OOP Concepts (polymorphism)
+
+- What should we know about this topic?
+    - Interview Perspective
+
+        We need to know everything verbally
+
+        What is the difference between ......and .......?
+
+        How did you use ..... collection in your test framework?
+
+    - Usage perspective
+
+        We will use: List - ArrayList - Set - Map - Arrays
+
+- All collections are iterable (Iterable is **an object, which one can iterate over**.)
+
+    Traverse: travel across or through /  move back and forth or sideways.
+    "a probe is traversed along the tunnel"
+
+    1→2→3...........→10  int i;
+
+    - sync : running slow (Vector)  sync also means Thread-Safe
+    - not sync : fast  (ArrayList)
+
+- List
+
+    ```
+    interface, takes duplicate, index, keeps order
+          allows multiple null values
+    ```
+
+- Stack
+
+    ```
+    Stack Methods
+    peek() ---> brings you the element which last LIFO: Last in First Out
+    p*op() ---> brings you the element w*hich last LIFO: Last in First Out and
+    DELETES the element
+    push() ---> similar to add method
+    ```
+
+- Important Note:
+
+    🤔  *`Collections Utility class comes with useful methods: such as sorting HOWEVER`**`Comparable interface does not work with null values`*
+
+    ```
+    ***** Likewise TreeSet does not accept null value since internally using Sorting
+     Any collection framework which has some type sorting  -----> DOES NOT ACCEPT                             NULL Values
+    ```
+
+- Set
+
+    an interface like List BUT:`unique, does not maintain order`
+
+    ```
+    •	Set is child interface of Collection.
+    •	If we want to represent a group of individual objects as a single entity where duplicates are NOT allowed, and insertion order NOT preserved then we should go for Set.
+    HashSet: not sync, no order, allow null
+    LinkedHashSet: not sync, ordered (insertion), accepts null
+    TreeSet : sorted in asc. order, DOES NOT accept null
+    ```
+
+- Vector
+
+    Vector implements a dynamic array. It is similar to ArrayList, but with
+    two differences :
+    • Vector is synchronized(thread-safe)
+    • Vector contains many legacy methods that are not part of the
+    collection framework.
+
+- QUEUE
+    - It is child interface of Collection.
+    - A Queue is a ***First In First Out (FIFO)*** data structure.
+- Loop Through Collection
+    1. *For each loop*
+    2. *Any other loop (for, while, do while) by using get(index) method*
+    3. ***forEach method*** that came with java 8 (lambda expression)
+    4. ***Iterator***
+    - How to use iterator
+        1. ******We need to ***create iterator object to able to use*** it***.***
+        2. ***We move the pointer using next() method***
+        3. ***hasNext() method return true, if there is still next value***
+        4. *We can remove values using remove() method*
+- PIQ: What is the difference between Iterator and For Each Loop?
