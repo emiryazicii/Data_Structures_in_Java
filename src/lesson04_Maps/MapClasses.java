@@ -1,4 +1,4 @@
-package lesson04_maps;
+package lesson04_Maps;
 
 import java.util.*;
 
