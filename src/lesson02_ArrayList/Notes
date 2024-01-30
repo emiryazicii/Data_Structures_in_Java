@@ -1,0 +1,24 @@
+Topics:
+
+        Wrapper Classes
+		ArrayList Intro
+        ArrayList Methods
+		Collections Utility
+
+
+Data Structure:
+
+		Array: size is fixed, supports both primitives & non-primitives, can be multi dimensional
+		Collection: size is dynamic, ONLY supports non-primitives
+		Map: size is dynamic, ONLY supports non-primitives
+
+
+
+Wrapper Class methods:
+
+		parse method: returns primitive type, converts String to primitive values
+
+		valueOf method: returns wrapper class objects, converts String to wrapper class values
+
+		Arrays Utility:
+        	asList(): returns a List, that contains the specified elements/array
