@@ -1,0 +1,61 @@
+Topics:
+
+        Arrays Intro
+        String Methods
+		Arrays Utility
+		For Each Loop
+        Multi-dimensional Array
+
+Data Structure: to use the data efficiently. allows us to store the data in an organized manner
+
+			1. Array
+			2. Collection
+			3. Map
+
+
+regular variable:
+
+		DataType  variableName;
+		int        age;
+		char       gender;
+		String     name;
+		....
+
+Array:
+		DataType[]  variableName;
+
+
+
+Arrays Utility class:  Arrays
+
+		presented in "java.util"
+
+
+		import java.util.Arrays;
+
+String Methods:
+
+	toCharArray(): returns char array
+	split(CharSequence): returns String array
+
+	regular variable:
+
+        int  age = 10;
+        int score = 75;
+        String name = "Java";
+
+
+    Array: special variable, size is fixed
+
+        Single Dimensional Array:[] , used for containing multiple elements
+
+                int[] scores = {10, 20, 30, 40};
+
+
+                toString() ==> for single dimensional arrays ONLY
+
+        Multi Dimensional Array: [][] ..., used for containing multiple arrays
+
+
+            deepToString() ==> for multi-dimensional dimensional arrays ONLY
+
