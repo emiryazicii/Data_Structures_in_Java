@@ -3,7 +3,7 @@ package lesson01_Array.practices;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class LargestAndSmallest {
+public class LargestCountry {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
