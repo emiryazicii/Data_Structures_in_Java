@@ -1,4 +1,4 @@
-package lesson03_Collections.practices;
+package lesson04_Maps.practices;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
