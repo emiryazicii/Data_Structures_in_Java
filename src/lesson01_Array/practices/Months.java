@@ -6,48 +6,35 @@ import java.util.Scanner;
 public class Months {
 
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter the months names by order : ");
-        String[] countries = new String[12];
-
+        // Prompt the user to enter the months in order
+        System.out.println("Enter the month names in order: ");
+        String[] months = new String[12];
         for (int i = 0; i < 12; i++) {
-            countries[i] = input.nextLine();
+            months[i] = input.nextLine();
         }
-        System.out.println("Thanks, here is the array that you created: ");
-        System.out.println(Arrays.toString(countries));
 
-        System.out.println("Enter a number and see to month result: ");
+        // Display the array of months
+        System.out.println("Thanks, here is the array that you created: ");
+        System.out.println(Arrays.toString(months));
+
+        // Prompt the user to enter a number representing a month
+        System.out.println("Enter a number to see the corresponding month: ");
         int num = input.nextInt();
 
+        // Validate the user input and print the corresponding month
         if (num >= 1 && num <= 12) {
-            System.out.println(countries[num - 1]);
-        }else {
-
+            System.out.println(months[num - 1]);
+        } else {
+            // Loop until the user enters a valid number
             do {
-                System.err.println("Invalid entry, please reenter: ");
+                System.err.println("Invalid entry, please reenter (1-12): ");
                 num = input.nextInt();
+            } while (num < 1 || num > 12);
 
-            }while(num < 0 || num > 12);
-
-            System.out.println(countries[num-1]);
+            System.out.println(months[num - 1]);
         }
         input.close();
     }
 }
-/*
-Months [array]
-
-	Create a program that will define an array with all the months in order. Use this array to help print the full name of a month by giving a number
-
-	Ex:
-		input: 1
-		output: January
-
-		input: 11
-		output: November
-
-	Other variations of this task we have done before: word to number, number to word
- */
-

@@ -4,16 +4,23 @@ public class MinNumberInArray {
 
     public static void main(String[] args) {
 
-        int[] numbers = {100,20,500,40,-10,30};
+        // Declare and initialize the array
+        int[] numbers = {100, 20, 500, 40, -10, 30};
 
-        int min = numbers[0]; // assume that first element is the minimum number
+        // Assume that the first element is the minimum number
+        int min = numbers[0];
 
+        // Loop through the array starting from the second element
         for (int i = 1; i < numbers.length; i++) {
 
-            if(numbers[i] < min){ // compares the element of the array with current minimum number
-                min = numbers[i]; // replace the current minimum number
+            // Compare each element with the current minimum number
+            if (numbers[i] < min) {
+                // If the current element is smaller, update the minimum number
+                min = numbers[i];
             }
         }
+
+        // Print the minimum number
         System.out.println("min = " + min);
     }
 }
