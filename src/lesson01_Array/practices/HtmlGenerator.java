@@ -3,14 +3,18 @@ package lesson01_Array.practices;
 public class HtmlGenerator {
 
     public static void main(String[] args) {
-
+        // Input request
         String request1 = "ul1;li3;button2";
 
+        // Split the request by semicolon to get individual tags and their repeat counts
         String[] arr = request1.split(";");
 
+        // Loop through each tag in the request
         for (String each : arr) {
             String tag = "";
             String repeat = "";
+
+            // Separate the tag name and repeat count from the current element
             for (int i = 0; i < each.length(); i++) {
                 char ch = each.charAt(i);
                 if (Character.isDigit(ch)) {
@@ -19,40 +23,11 @@ public class HtmlGenerator {
                     tag += ch;
                 }
             }
+
+            // Print the tag with its opening and closing brackets according to the repeat count
             for (int j = 0; j < Integer.parseInt(repeat); j++) {
                 System.out.println("<" + tag + "></" + tag + ">");
             }
         }
     }
 }
-/*
-T2HtmlGenerator [String, wrapper class, loop, array]
-
-Create a program that will read the request for the HTML that will be generated. Each request will be made of the tags and how many times that tag should be repeated. Each separate HTML tag will be separated by a semi-colon;
-
-Tags should be surrounded in diamond brackets and each closing tag has a / too
-
-Note: we are not creating a fully valid HTML structure. It is just a task
-
-    Ex:
-        Input:
-            div2;li1
-
-        Output:
-            <div> </div>
-            <div> </div>
-            <li> </li>
-
-    Ex:
-        Input:
-            ul1;li3;button2
-
-        Output:
-            <ul> </ul>
-            <li> </li>
-            <li> </li>
-            <button> </button>
-            <button> </button>
-
- */
-

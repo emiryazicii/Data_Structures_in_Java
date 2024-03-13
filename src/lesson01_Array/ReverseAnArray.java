@@ -5,42 +5,29 @@ import java.util.Arrays;
 public class ReverseAnArray {
 
     public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
 
-        int[] array = {1,2,3,4,5};
+        // Reversing the array
+        int[] reversedArray = reverseArray(array);
 
-        int[] reverse = new int[array.length];
+        // Printing the reversed array
+        System.out.println("Reversed array: " + Arrays.toString(reversedArray));
+    }
 
-        for (int i = array.length - 1,j = 0; i >= 0; i--,j++) {
+    /**
+     * Reverses the given array of integers and returns the reversed array.
+     *
+     * @param array The array to be reversed.
+     * @return The reversed array.
+     */
+    public static int[] reverseArray(int[] array) {
+        int[] reversedArray = new int[array.length];
 
-            reverse[j] = array[i];
+        // Reversing the array
+        for (int i = array.length - 1, j = 0; i >= 0; i--, j++) {
+            reversedArray[j] = array[i];
         }
 
-        System.out.println(Arrays.toString(reverse));
-
-        System.out.println("----------------------------------------");
-
-        int[] nums = {100,200,300,400,500};
-
-        nums = ArrayUtils.reverse(nums);
-
-        System.out.println(Arrays.toString(nums));
-
-        System.out.println("--------------------------------------------");
-
-        double[] d1 = {10.5,60,5,30.4,90.4};
-
-        d1 = ArrayUtils.reverse(d1);
-
-        System.out.println(Arrays.toString(d1));
-
+        return reversedArray;
     }
 }
-/*
- Write a program that can reverse an array of integers and returns it as new array
-	        ex:
-	            array = {1,2,3,4,5};
-
-	        output:
-	            reversedArray = {5,4,3,2,1};
-
- */

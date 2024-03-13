@@ -5,34 +5,30 @@ import java.util.Arrays;
 public class StartsWith {
 
     public static void main(String[] args) {
+        // Array of country names
+        String[] countries = {"Cuba", "Fiji", "Togo", "Colombia", "Cyprus"};
 
-
-        String[] countries = {"Cuba", "Fiji","Togo","Colombia","Cyprus"};
-
+        // Count the number of countries starting with 'C' or 'c'
         int count = 0;
-        for (String each : countries) {
-            if (each.startsWith("C") || each.startsWith("c")) {
+        for (String country : countries) {
+            if (country.startsWith("C") || country.startsWith("c")) {
                 count++;
             }
         }
+
+        // Array to store countries starting with 'C' or 'c'
         String[] startWithC = new String[count];
 
+        // Populate the array with countries starting with 'C' or 'c'
         int i = 0;
-        for (String each2 : countries) {
-            if (each2.startsWith("C") || each2.startsWith("c")) {
-                startWithC[i++] = each2;
+        for (String country : countries) {
+            if (country.startsWith("C") || country.startsWith("c")) {
+                startWithC[i++] = country;
             }
         }
-        System.out.println("Here is the countries starts with \"C\" ");
+
+        // Print the countries starting with 'C' or 'c'
+        System.out.println("Here are the countries that start with \"C\":");
         System.out.println(Arrays.toString(startWithC));
     }
 }
-/*
- Create a program that defines an array of countries.
- Use the countries defined below or create your own array that has different country names.
- Use the countries to display different information defined in the mini tasks.
-
-   - Show all the countries that start with a 'C'
-
- */
-

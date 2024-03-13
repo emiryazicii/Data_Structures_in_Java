@@ -2,41 +2,37 @@ package lesson01_Array.practices;
 
 public class CustomToString {
 
-    public static void main(String[] args) {
-
-        int[][] arr = {{3, 4, 5, 6}, {5, 2, 6}, {10, 40, 20}};
-        System.out.println(customToString(arr));
-    }
+    /**
+     * Creates a custom string representation of a 2D integer array.
+     *
+     * @param arr the 2D integer array
+     * @return a custom string format of the array
+     */
     public static String customToString(int[][] arr) {
-
         String str = "";
 
+        // Loop through the rows of the array
         for (int i = 0; i < arr.length; i++) {
-            str += "Index "+i+" :";
+            // Append the index
+            str += "Index " + i + " | ";
+
+            // Loop through the columns of the current row
             for (int j = 0; j < arr[i].length; j++) {
-                str += "<" + arr[i][j] + ">";
+                // Append each element surrounded by parentheses
+                str += "(" + arr[i][j] + ")";
             }
-            str+="\n";
+
+            // Add a newline character after each row
+            str += "\n";
         }
         return str;
     }
+
+    public static void main(String[] args) {
+        int[][] arr = {{3, 4, 5, 6}, {5, 2, 6}, {10, 40, 20}};
+
+        // Test the customToString method
+        System.out.println("Custom String Representation:");
+        System.out.println(customToString(arr));
+    }
 }
-/*
-CustomPrint [multidimensional, loop, String, method]
-
-     Create a method that will accept a 2D int array and return a String format of the array. Make your own custom print format for this 2D array instead of using the deepToString() method
-
-     Ex:    this is just an example. You can be creative for how the 2D array will be printed
-       int [][] nums = {
-                {3, 4, 5, 6},
-                {5, 2, 6},
-                {10, 40, 20}
-        };
-
-        output:
-            index 0 | (3)(4)(5)(6)
-            index 1 | (5)(2)(6)
-            index 3 | (10)(40)(20)
-
- */
-
