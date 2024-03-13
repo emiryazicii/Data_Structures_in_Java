@@ -5,42 +5,53 @@ import java.util.Arrays;
 
 public class AverageEach {
 
-    public static void main(String[] args) {
-
-        int[][] nums = {{3, 4, 5, 6}, {5, 2, 6}, {10, 40, 20}};
-        System.out.println(printAverage(nums));
-    }
+    /**
+     * Calculates the average of each inner array and the average of the whole 2D array.
+     *
+     * @param arr 2D integer array
+     * @return a string representation of the averages
+     */
     public static String printAverage(int[][] arr) {
+        // DecimalFormat to format the average values
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+        // String to store the output
         String str = "";
-        double sum = 0 , sumAll = 0;
+
+        // Variables to calculate the sum and count of elements
+        double sum = 0, sumAll = 0;
         int elementCount = 0;
 
+        // Loop through the 2D array
         for (int i = 0; i < arr.length; i++) {
+            // Append the current array to the output string
             str += "Average of :" + Arrays.toString(arr[i]) + " is ";
+
+            // Loop through the inner array to calculate the sum
             for (int j = 0; j < arr[i].length; j++) {
                 sum += arr[i][j];
                 sumAll += arr[i][j];
                 elementCount++;
             }
-            str += decimalFormat.format(sum / arr[i].length)+"\n";
+
+            // Calculate the average of the current inner array and append to the output string
+            str += decimalFormat.format(sum / arr[i].length) + "\n";
+
+            // Reset the sum for the next inner array
             sum = 0;
         }
-        return str+"Average of all is : "+decimalFormat.format(sumAll/elementCount);
+
+        // Calculate the overall average and append to the output string
+        return str + "Average of all is : " + decimalFormat.format(sumAll / elementCount);
+    }
+
+    public static void main(String[] args) {
+        // Define a 2D array
+        int[][] nums = {{3, 4, 5, 6}, {5, 2, 6}, {10, 40, 20}};
+
+        // Print the result
+        System.out.println(printAverage(nums));
     }
 }
-/*
-AverageEach [multidimensional, loop]
 
-    Create a program that will define a 2D int array with some numbers. Go through and calculate the average of each inner array and the average of the whole 2D array
-
-    Ex:
-
-
-        output:
-            average of: [3, 4, 5, 6] is 4.5
-            average of: [5, 2, 6] is 4.33
-            average of: [10, 40, 20] is 23.33
-            average of all is 10.1
- */
 

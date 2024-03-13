@@ -4,33 +4,30 @@ public class MaxAndMinNumbersOfMultiDimensionalArray {
 
     public static void main(String[] args) {
 
+        // Define the two-dimensional array
         int[][] array = { {100, 20, 300}, {10, 1000, 50}, {-200, 400, 0} };
 
-        int max = array[0][0];
-        int min = array[0][0];
+        // Initialize variables to hold maximum and minimum values
+        int max = array[0][0]; // Initialize max with the first element of the array
+        int min = array[0][0]; // Initialize min with the first element of the array
 
+        // Iterate over each row (eachList) in the two-dimensional array
         for (int[] eachList : array) {
+            // Iterate over each element (elements) in the current row
             for (int elements : eachList) {
-                if (elements > max){
+                // Check if the current element is greater than max, update max if true
+                if (elements > max) {
                     max = elements;
                 }
-                if (elements < min){
+                // Check if the current element is smaller than min, update min if true
+                if (elements < min) {
                     min = elements;
                 }
             }
         }
-        System.out.println("Maximum number: "+max);
-        System.out.println("Minimum number: "+min);
 
+        // Print the maximum and minimum values found in the two-dimensional array
+        System.out.println("Maximum number: " + max);
+        System.out.println("Minimum number: " + min);
     }
 }
-/*
-2. Write a program that can find the minimum and maximum numbers from a two dimensional array of integers
-		Ex:
-			array = { {100, 20, 300}, {10, 1000, 50}, {-200, 400, 0} };
-
-			output:
-				Minimum number is: -200
-				Maximum number is: 1000
-
- */
